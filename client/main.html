@@ -1,0 +1,43 @@
+<template name="main">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MadCoders</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- Latest compiled and minified CSS -->
+
+  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://use.fontawesome.com/d0122588bd.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body class="index">
+  {{>nav}}
+  {{>header}}
+  {{#if currentUser}}
+  {{>tracks}}
+  {{> socialmedia}}
+  {{>footer}}
+  {{else}}
+  <header style="background-image: url('https://images.pexels.com/photos/403571/pexels-photo-403571.jpeg?w=1020&h=1080&auto=compress&cs=tinysrgb')">
+    <div class="container">
+      <div class="intro-text">
+    <div class="intro-heading" style="color: black">Please Log in to see our content</div>
+    <button class="btn btn-xl">{{> loginButtons}}</button>
+    </div>
+    </div>
+  </header>
+  {{> socialmedia}}
+  {{>footer}}
+{{/if}}
+
+
+</body>
+</template>

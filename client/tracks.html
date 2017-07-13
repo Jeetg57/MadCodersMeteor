@@ -1,0 +1,102 @@
+<template name="tracks">
+<head>
+  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<section class="container-fluid">
+  <h2 class="section-heading text-center">Beginner courses</h2>
+  <p class="container">
+    Each of these courses help people with no prior exposure to computer science or programming learn to think computationally and write programs to tackle useful problems. Some of the people taking these courses will use them as a stepping stone to more advanced computer science courses, but for many they would be their first and last computer science courses.
+  </p>
+<div>
+
+	<div class="square-flip text-center" style="width:30rem; height:30rem;">
+		<div class='square' data-image="https://www.class-central.com/report/app/uploads/2016/09/harvard-computer-science-cs50-lecture.jpg">
+			<div class="square-container">
+				<div class="align-center"><i class="fa fa-meetup fa-5x"></i></div>
+				<h2 class="textshadow">CS50 by Harvard and Yale Universities</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image="http://www.cs50xhelpers.org/img/fb.png">
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank" class="boxshadow kallyas-button">Enroll Now</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+
+	<div class="square-flip" style="width:30rem; height:30rem;">
+		<div class='square' data-image="https://s-media-cache-ak0.pinimg.com/736x/42/09/3e/42093e6fcb7265b2f46425a72af91ab1--udemy-computer-science.jpg">
+			<div class="square-container">
+				<div class="align-center"><i class="fa fa-meetup fa-5x"></i></div>
+				<h2 class="textshadow">CS101:Introduction To CS</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image="https://d125fmws0bore1.cloudfront.net/assets/udacity_share-46db4b8faf075a5af5a1070a7fa0ad3639783609ff45f447e4ea467fe3aa9d32.png">
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="https://www.udacity.com/course/intro-to-computer-science--cs101" target="_blank" class="boxshadow kallyas-button">Enroll Now</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+
+    <div class="square-flip" style="width:30rem; height:30rem;">
+  		<div class='square' data-image="http://www.servicesmobiles.fr/wp-content/uploads/2015/11/shutterstock_230705539-e1448490316447.jpg">
+  			<div class="square-container">
+  				<div class="align-center"><i class="fa fa-meetup fa-5x"></i></div>
+  				<h2 class="textshadow">MIT 6.001x:Introduction to Computer Science and Programming Using Python</h2>
+  			</div>
+  			<div class="flip-overlay"></div>
+  		</div>
+  		<div class='square2' data-image="http://www.mpsadvantage.education/wp-content/uploads/2017/01/MIT-Logo.png">
+  			<div class="square-container2">
+  				<div class="align-center"></div>
+  				<a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-10" target="_blank" class="boxshadow kallyas-button">Enroll Now</a>
+  			</div>
+  			<div class="flip-overlay"></div>
+  		</div>
+  	</div>
+    <div class="square-flip" style="width:30rem; height:30rem;">
+  		<div class='square' data-image="https://expresswriters.com/wp-content/uploads/2015/09/google-new-logo.jpg">
+  			<div class="square-container">
+  				<div class="align-center"><i class="fa fa-meetup fa-5x"></i></div>
+  				<h2 class="textshadow">Google's Python Class</h2>
+  			</div>
+  			<div class="flip-overlay"></div>
+  		</div>
+  		<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+  			<div class="square-container2">
+  				<div class="align-center"></div>
+  				<a href="https://developers.google.com/edu/python/" target="_blank" class="boxshadow kallyas-button">Enroll Now</a>
+  			</div>
+  			<div class="flip-overlay"></div>
+  		</div>
+  	</div>
+</div>
+</section>
+
+<script>
+jQuery(document).ready(function($) {
+
+  //Count nr. of square classes
+  var countSquare = $('.square').length;
+
+  //For each Square found add BG image
+  for (i = 0; i < countSquare; i++) {
+    var firstImage = $('.square').eq([i]);
+    var secondImage = $('.square2').eq([i]);
+
+    var getImage = firstImage.attr('data-image');
+    var getImage2 = secondImage.attr('data-image');
+
+    firstImage.css('background-image', 'url(' + getImage + ')');
+    secondImage.css('background-image', 'url(' + getImage2 + ')');
+  }
+
+});
+</script>
+</template>
